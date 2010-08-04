@@ -1,0 +1,86 @@
+============================================================================
+================================== README ==================================
+============================================================================
+
+All the projects need XCode 3.0 or later to be compiled
+
+./deprecated and ./enkriptKext/deprecated contain unused codes that were 
+used during the project development.
+
+./enkriptKext contains the kernel extension for creating a fake encrypted 
+device on OSX; also contains a kernel land code for monitoring tasks 
+exceptions (like the companion)
+(cf ./enkriptKext/README)
+
+./enkriptWrapper contains the encryption wrapper project. It generates two 
+binaries:
+
+- enkriptWrapper: the tool used to wrap/encrypt an executable
+- enkriptCompanion: the companion executable, used as a launcher for 
+launching encrypted executables. It is also responsible for monitoring and
+decrypting the target encrypted executable. With no argument 
+enkriptCompanion launches by default $(NAME).encrypted in the same 
+directory.
+
+/!\ On Leopard, you may need to sign the companion executable or to 
+sudo it /!\
+
+
+
+============================================================================
+=================================== DEMO ===================================
+============================================================================
+$ pwd
+/Users/nico/build/Debug
+$ ls -l
+total 68
+-r-x------  1 nico  staff  35800 10 Nov 16:57 enkriptCompanion
+-r-x------  1 nico  staff  29776 10 Nov 16:57 enkriptWrapper
+$ mkdir test
+$ cd test
+$ cat > test.c
+int main(){printf("hello\n");}
+$ gcc test.c 
+$ ./a.out 
+hello
+$ strings ./a.out 
+hello
+$ pwd
+/Users/nico/build/Debug/test
+$ cd ..
+$ pwd
+/Users/nico/build/Debug
+$ ls
+enkriptCompanion enkriptWrapper   test
+$ ./enkriptWrapper 
+2008-11-10 17:14:17.370 enkriptWrapper[12773:10b] main - usage: enrkiptWrapper
+binary_to_encrypt
+$ ./enkriptWrapper test/a.out 
+2008-11-10 17:14:24.292 enkriptWrapper[12774:10b] main - target binary: 
+test/a.out
+2008-11-10 17:14:24.294 enkriptWrapper[12774:10b] main - encrypted save 
+@ test/a.out.trampoline (test/a.out.trampoline.encrypted)
+$ ls -lR
+total 68
+-rwxr-xr-x  1 nico  staff  35800 10 Nov 16:57 enkriptCompanion
+-rwxr-xr-x  1 nico  staff  29776 10 Nov 16:57 enkriptWrapper
+drwx------  6 nico  staff    204 10 Nov 17:14 test
+
+./test:
+total 72
+-rwx------  1 nico  staff  12588 10 Nov 17:08 a.out
+-rwxr-xr-x  1 nico  staff  35800 10 Nov 16:57 a.out.trampoline
+-rwx------  1 nico  staff  12588 10 Nov 17:14 a.out.trampoline.encrypted
+-rw-------  1 nico  staff     31 10 Nov 17:08 test.c
+$ string ./test/a.out
+hello
+$ strings ./test/a.out.trampoline.encrypted 
+$ sudo ./test/a.out.trampoline 
+# a.out.trampoline is just a copy of the enkriptCompanion binary.
+Password:
+hello
+$ 
+
+ 
+
+

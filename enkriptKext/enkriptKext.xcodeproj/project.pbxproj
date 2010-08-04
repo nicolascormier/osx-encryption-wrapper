@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		031EFA300E8CF540003F48ED /* EKService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 031EFA2E0E8CF540003F48ED /* EKService.cpp */; };
+		03435B4C0E8B4623008B1DE5 /* EKString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03435B4B0E8B4623008B1DE5 /* EKString.cpp */; };
+		0357AE880EA7005000968C29 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0357AE870EA7005000968C29 /* README.txt */; };
+		03990A120E8DE32F008FEDD4 /* EKUserClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03990A100E8DE32F008FEDD4 /* EKUserClient.cpp */; };
+		03D208BC0E89EC6800355262 /* EKFilterScheme.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0370D47B0E83524000E20A68 /* EKFilterScheme.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		031EFA2D0E8CF540003F48ED /* EKService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKService.h; sourceTree = "<group>"; };
+		031EFA2E0E8CF540003F48ED /* EKService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EKService.cpp; sourceTree = "<group>"; };
+		03435B490E8B4350008B1DE5 /* EKString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKString.h; sourceTree = "<group>"; };
+		03435B4B0E8B4623008B1DE5 /* EKString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EKString.cpp; sourceTree = "<group>"; };
+		0357AE870EA7005000968C29 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		0370D47A0E83524000E20A68 /* EKFilterScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKFilterScheme.h; sourceTree = "<group>"; };
+		0370D47B0E83524000E20A68 /* EKFilterScheme.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EKFilterScheme.cpp; sourceTree = "<group>"; };
+		03990A0F0E8DE32F008FEDD4 /* EKUserClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKUserClient.h; sourceTree = "<group>"; };
+		03990A100E8DE32F008FEDD4 /* EKUserClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EKUserClient.cpp; sourceTree = "<group>"; };
+		03EB205D0E835CA80081D10A /* EKDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKDebug.h; sourceTree = "<group>"; };
+		32D94FCF0562CBF700B6AF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32D94FD00562CBF700B6AF17 /* enkriptKext.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = enkriptKext.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DA8362C06AD9B9200E5AC22 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32D94FCB0562CBF700B6AF17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		031EFA2C0E8CF405003F48ED /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				031EFA2D0E8CF540003F48ED /* EKService.h */,
+				031EFA2E0E8CF540003F48ED /* EKService.cpp */,
+				03990A0F0E8DE32F008FEDD4 /* EKUserClient.h */,
+				03990A100E8DE32F008FEDD4 /* EKUserClient.cpp */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		0357AE860EA7003D00968C29 /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+				0357AE870EA7005000968C29 /* README.txt */,
+			);
+			name = Doc;
+			sourceTree = "<group>";
+		};
+		03D207D30E88ADEB00355262 /* Filter Scheme */ = {
+			isa = PBXGroup;
+			children = (
+				0370D47A0E83524000E20A68 /* EKFilterScheme.h */,
+				0370D47B0E83524000E20A68 /* EKFilterScheme.cpp */,
+			);
+			name = "Filter Scheme";
+			sourceTree = "<group>";
+		};
+		03D207D40E88AE0000355262 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				03EB205D0E835CA80081D10A /* EKDebug.h */,
+				03435B490E8B4350008B1DE5 /* EKString.h */,
+				03435B4B0E8B4623008B1DE5 /* EKString.cpp */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		089C166AFE841209C02AAC07 /* enkriptKext */ = {
+			isa = PBXGroup;
+			children = (
+				0357AE860EA7003D00968C29 /* Doc */,
+				247142CAFF3F8F9811CA285C /* Source */,
+				8DA8362C06AD9B9200E5AC22 /* Kernel.framework */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+			);
+			name = enkriptKext;
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32D94FCF0562CBF700B6AF17 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32D94FD00562CBF700B6AF17 /* enkriptKext.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		247142CAFF3F8F9811CA285C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				031EFA2C0E8CF405003F48ED /* Service */,
+				03D207D40E88AE0000355262 /* Base */,
+				03D207D30E88ADEB00355262 /* Filter Scheme */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		32D94FC50562CBF700B6AF17 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		32D94FC30562CBF700B6AF17 /* enkriptKext */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "enkriptKext" */;
+			buildPhases = (
+				32D94FC50562CBF700B6AF17 /* Headers */,
+				32D94FC70562CBF700B6AF17 /* Resources */,
+				32D94FC90562CBF700B6AF17 /* Sources */,
+				32D94FCB0562CBF700B6AF17 /* Frameworks */,
+				32D94FCC0562CBF700B6AF17 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = enkriptKext;
+			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+			productName = enkriptKext;
+			productReference = 32D94FD00562CBF700B6AF17 /* enkriptKext.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "enkriptKext" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* enkriptKext */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32D94FC30562CBF700B6AF17 /* enkriptKext */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32D94FC70562CBF700B6AF17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0357AE880EA7005000968C29 /* README.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		32D94FCC0562CBF700B6AF17 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32D94FC90562CBF700B6AF17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03D208BC0E89EC6800355262 /* EKFilterScheme.cpp in Sources */,
+				03435B4C0E8B4623008B1DE5 /* EKString.cpp in Sources */,
+				031EFA300E8CF540003F48ED /* EKService.cpp in Sources */,
+				03990A120E8DE32F008FEDD4 /* EKUserClient.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91DA08733DB10010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = com.yourcompany.driver.enkriptKext;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = enkriptKext;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		1DEB91DB08733DB10010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = com.yourcompany.driver.enkriptKext;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = enkriptKext;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+		1DEB91DE08733DB10010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB91DF08733DB10010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "enkriptKext" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91DA08733DB10010E9CD /* Debug */,
+				1DEB91DB08733DB10010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "enkriptKext" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91DE08733DB10010E9CD /* Debug */,
+				1DEB91DF08733DB10010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

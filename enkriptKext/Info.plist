@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OSBundleRequired - 2</key>
+	<string>Local-Root</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>enkriptKext</string>
+	<key>CFBundleName</key>
+	<string>EnKript kernel extension</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.enkript.driver</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0d1</string>
+	<key>OSBundleRequired</key>
+	<string>Local-Root</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>EnKript_Service</key>
+		<dict>
+			<key>IOClass</key>
+			<string>com_enkript_driver_Service</string>
+			<key>IOMatchCategory</key>
+			<string>com_enkript_driver_Service</string>
+			<key>IOProviderClass</key>
+			<string>IOResources</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
+			<key>IOUserClientClass</key>
+			<string>com_enkript_driver_UserClient</string>
+		</dict>
+		<key>EnKript_FilterScheme</key>
+		<dict>
+			<key>IOClass</key>
+			<string>com_enkript_driver_FilterScheme</string>
+			<key>IOProviderClass</key>
+			<string>IOMedia</string>
+			<key>IOMatchCategory</key>
+			<string>IOStorage</string>
+			<key>Content Hint</key>
+			<string>EnKript_HFS</string>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.kernel</key>
+		<string>9.2.0</string>
+		<key>com.apple.iokit.IOStorageFamily</key>
+		<string>1.2</string>
+	</dict>
+</dict>
+</plist>

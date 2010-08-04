@@ -1,0 +1,22 @@
+============================================================================
+================================== README ==================================
+============================================================================
+
+
+EKFilterScheme.{cpp,h}: encrypted device
+
++ kextload ./enkriptKext.kext
++ hdiutil create -megabytes 15 -partitionType EnKript_HFS $NAME.dmg
++ hdiutil attach -nomount $NAME.dmg
++ newfs_hfs -v "$PARTNAME" /dev/rdiskXsXsX
++ hdiutil detach diskX
+
+
+EKService.{cpp,h}: overrides and monitors a specific user land task 
+exceptions
+
++ the target is received via the EKUserClient.{cpp,h}
++ EKUserClient expose a driver method to register a task
++ cf enkript/deprecated/test/main.c for userland details
+
+main.c <-> EKUserClient.cpp <-> EKService.cpp
